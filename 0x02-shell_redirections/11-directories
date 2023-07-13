@@ -1,2 +1,2 @@
 #!/bin/bash
-find -mindepth 1 -type d | wc -|
+count=$(find . -type d -not -path "./.*" -not -path "." -not -path "./.." | wc -l); echo "Total number of directories: $count"
